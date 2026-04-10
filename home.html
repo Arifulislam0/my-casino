@@ -1,70 +1,84 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - 77ABC</title>
+    <title>BD420 Lobby</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: #0d1b1e; color: white; font-family: sans-serif; padding-bottom: 70px; }
-        header { background: #162a2d; padding: 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ffd700; }
-        .balance { background: #000; padding: 5px 12px; border-radius: 15px; border: 1px solid #ffd700; font-size: 14px; }
+        body { background-color: #001212; color: white; font-family: Arial, sans-serif; padding-bottom: 80px; }
+        header { background: #012b2b; padding: 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ffd700; position: sticky; top: 0; z-index: 100; }
+        .brand-name { font-size: 22px; font-weight: bold; color: #ffd700; }
+        .balance-chip { background: #000; padding: 5px 15px; border-radius: 20px; color: #00ff00; border: 1px solid #00ff00; font-weight: bold; }
         
-        .categories { display: flex; overflow-x: auto; padding: 10px; gap: 8px; background: #162a2d; }
-        .cat { padding: 8px 15px; background: #244044; border-radius: 5px; font-size: 13px; white-space: nowrap; }
-        .active { background: #00a8a8; color: white; }
+        .game-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 15px; }
+        .game-card { background: #0a2e2e; border-radius: 10px; overflow: hidden; border: 1px solid #1a4d4d; text-align: center; cursor: pointer; transition: 0.2s; }
+        .game-card:active { transform: scale(0.95); }
+        .game-card img { width: 100%; height: 90px; object-fit: cover; display: block; }
+        .game-card p { font-size: 10px; padding: 6px 2px; color: #ffd700; font-weight: bold; text-transform: uppercase; }
 
-        .game-section { padding: 15px; }
-        .section-title { font-size: 16px; margin-bottom: 10px; display: flex; align-items: center; gap: 5px; }
-        
-        .game-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-        .game-item { background: #1c3539; border-radius: 10px; overflow: hidden; text-align: center; border: 1px solid #2d4d52; cursor: pointer; }
-        .game-item img { width: 100%; aspect-ratio: 1/1; object-fit: cover; background: #333; }
-        .game-item p { font-size: 11px; padding: 5px; color: #ddd; }
-
-        /* বটম মেনু */
-        .bottom-nav { position: fixed; bottom: 0; width: 100%; background: #162a2d; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #2d4d52; }
-        .nav-item { text-align: center; font-size: 11px; color: #888; text-decoration: none; }
+        .bottom-nav { position: fixed; bottom: 0; width: 100%; background: #012b2b; display: flex; justify-content: space-around; padding: 12px 0; border-top: 1px solid #ffd700; }
+        .nav-link { color: #888; text-decoration: none; font-size: 11px; text-align: center; }
+        .nav-link.active { color: #ffd700; }
     </style>
 </head>
 <body>
 
 <header>
-    <div style="font-weight: bold; color: #ffd700;">☰ 77ABC</div>
-    <div class="balance">৳ ১০০.০০ ↻</div>
+    <div class="brand-name">BD420</div>
+    <div class="balance-chip">৳ 5,000.00 ↻</div>
 </header>
 
-<div class="categories">
-    <div class="cat active">হোম</div>
-    <div class="cat">পছন্দ</div>
-    <div class="cat">স্লট</div>
-    <div class="cat">ফিশিং</div>
-    <div class="cat">লাইভ</div>
-</div>
+<div style="padding: 15px; font-size: 14px; color: #888;">HOT GAMES 🔥</div>
 
-<div class="game-section">
-    <div class="section-title">🎰 সাম্প্রতিক খেলা</div>
-    <div class="game-grid">
-        <div class="game-item" onclick="location.href='slot1.html'">
-            <img src="https://via.placeholder.com/150/ff0000?text=Super+Ace" alt="Game">
-            <p>Super Ace</p>
-        </div>
-        <div class="game-item" onclick="alert('গেমটি শীঘ্রই আসছে!')">
-            <img src="https://via.placeholder.com/150/0000ff?text=Aviator" alt="Game">
-            <p>Aviator</p>
-        </div>
-        <div class="game-item" onclick="alert('গেমটি শীঘ্রই আসছে!')">
-            <img src="https://via.placeholder.com/150/ffff00?text=Fortune" alt="Game">
-            <p>Fortune Gems</p>
-        </div>
+<div class="game-grid">
+    <div class="game-card" onclick="location.href='game1.html'">
+        <img src="https://images.tuyacdn.com/smart/icon/150/150/1572420000.png" alt="Game">
+        <p>Super Ace</p>
+    </div>
+    <div class="game-card" onclick="alert('Coming Soon')">
+        <img src="https://static.vecteezy.com/system/resources/previews/013/444/625/original/aviator-plane-icon-clipart-design-free-vector.jpg" alt="Game">
+        <p>Aviator</p>
+    </div>
+    <div class="game-card" onclick="alert('Coming Soon')">
+        <img src="https://play-lh.googleusercontent.com/8-l2kL7_j9_S_vN0j0ZtM2-N_i0V-X2" alt="Game">
+        <p>Fortune Gems</p>
+    </div>
+    <div class="game-card" onclick="alert('Coming Soon')">
+        <img src="https://img.freepik.com/premium-vector/slot-machine-casino-game_1639-26514.jpg" alt="Game">
+        <p>Boxing King</p>
+    </div>
+    <div class="game-card" onclick="alert('Coming Soon')">
+        <img src="https://images.easyfreeclipart.com/1247/7-slots-casino-clipart-1247963.png" alt="Game">
+        <p>Golden Empire</p>
+    </div>
+    <div class="game-card" onclick="alert('Coming Soon')">
+        <img src="https://play-lh.googleusercontent.com/9v8S..." alt="Game">
+        <p>Crazy 777</p>
+    </div>
+    <div class="game-card" onclick="alert('Coming Soon')">
+        <img src="https://via.placeholder.com/150?text=Jili" alt="Game">
+        <p>Jili Slot</p>
+    </div>
+    <div class="game-card" onclick="alert('Coming Soon')">
+        <img src="https://via.placeholder.com/150?text=Fish" alt="Game">
+        <p>Ocean King</p>
+    </div>
+    <div class="game-card" onclick="alert('Coming Soon')">
+        <img src="https://via.placeholder.com/150?text=Poker" alt="Game">
+        <p>Poker Pro</p>
+    </div>
+    <div class="game-card" onclick="alert('Coming Soon')">
+        <img src="https://via.placeholder.com/150?text=Roulette" alt="Game">
+        <p>Roulette</p>
     </div>
 </div>
 
 <nav class="bottom-nav">
-    <a href="#" class="nav-item">🏠<br>হোম</a>
-    <a href="#" class="nav-item">🎁<br>প্রমোশন</a>
-    <a href="#" class="nav-item" style="color: #ffd700;">💰<br>ডিপোজিট</a>
-    <a href="#" class="nav-item">👤<br>সদস্য</a>
+    <a href="#" class="nav-link active">HOME</a>
+    <a href="#" class="nav-link">PROMOTION</a>
+    <a href="#" class="nav-link" style="color: #ffd700; font-weight: bold;">DEPOSIT</a>
+    <a href="#" class="nav-link">MEMBER</a>
 </nav>
 
 </body>
