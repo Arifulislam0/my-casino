@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - 77ABC</title>
+    <title>BD420 - Login</title>
     <style>
-        body { background: #0d1b1e; color: white; font-family: Arial; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .login-card { background: #162a2d; padding: 30px; border-radius: 15px; border: 1px solid #ffd700; width: 80%; text-align: center; }
-        input { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
-        button { background: #ffd700; color: black; border: none; padding: 12px; width: 100%; font-weight: bold; border-radius: 5px; cursor: pointer; }
-        .logo { font-size: 30px; color: #ffd700; font-weight: bold; margin-bottom: 20px; }
+        body { background: #000c0c; color: white; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-container { background: #012b2b; padding: 30px; border-radius: 15px; border: 1px solid #ffd700; width: 320px; text-align: center; box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); }
+        .brand { font-size: 35px; font-weight: bold; color: #ffd700; margin-bottom: 20px; text-shadow: 2px 2px #000; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: 1px solid #1a4d4d; background: #001a1a; color: white; box-sizing: border-box; }
+        .btn-login { background: #ffd700; color: #000; border: none; padding: 12px; width: 100%; font-weight: bold; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+        .btn-signup { background: transparent; color: #ffd700; border: 1px solid #ffd700; padding: 10px; width: 100%; margin-top: 15px; border-radius: 5px; cursor: pointer; font-size: 13px; }
+        .footer-text { margin-top: 20px; font-size: 12px; color: #888; }
     </style>
 </head>
 <body>
-    <div class="login-card">
-        <div class="logo">77ABC</div>
-        <input type="text" id="user" placeholder="ইউজারনেম">
-        <input type="password" id="pass" placeholder="পাসওয়ার্ড">
-        <!-- লগইন করলে home.html এ নিয়ে যাবে -->
-        <button onclick="location.href='home.html'">লগইন করুন</button>
+    <div class="login-container">
+        <div class="brand">BD420</div>
+        <input type="text" placeholder="Username / Email">
+        <input type="password" placeholder="Password">
+        <button class="btn-login" onclick="location.href='home.html'">LOGIN</button>
+        <button class="btn-signup">SIGN UP</button>
+        <div class="footer-text">Forgot Password? | 24/7 Support</div>
     </div>
 </body>
 </html>
